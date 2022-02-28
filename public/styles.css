@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+*{
+    padding: 0; 
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+body{
+    padding: 10px;
+    background-color: #E0DFD5;
+}
+
+header{
+    text-align: center;
+}
+header h1{
+    font-size: 50px;
+}
+header p{
+    font-size: 18px;
+}
+
+.container {
+    background-color: #E8E9EB;
+    width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 25px;
+    min-width: 300px;
+}
+
+.inputData{
+    text-align: left;
+    margin-left: 30%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.inputData input{
+    margin-left: 5px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.submitData{
+    text-align: center;
+}
+.submitData input{
+    border-radius: 25px;
+    padding: 7px;
+    border: 2px solid #E0DFD5;
+    transition: all .4s ease;
+}
+.submitData input:hover{
+    background-color: #c5c4bd;
+    cursor: pointer;
+}
+
+img{
+    width: 200px;
+    border-radius: 25px;
+}
+
+.card{
+    display: inline-block;
+    border-radius: 25px;
+    margin: 20px;
+    padding: 15px;
+    background-color: #E8E9EB;
+    border: 5px solid;
+    border-image: linear-gradient(45deg, #EF626C, #7765E3) 1;
+    max-width: 200px;
+}
+.displayCards{
+    text-align: center;
+}
