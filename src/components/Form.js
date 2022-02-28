@@ -1,27 +1,41 @@
 import React, { useState } from "react";
 
 const Form = (props) =>{
-    const [cardName , setCardName] = useState()
-    const [cardGender , setcardGender] = useState()
-    const [cardDOB , setcardDOB] = useState()
-    const [cardImgUrl , setcardImgUrl] = useState()
+    // const [cardName , setCardName] = useState()
+    // const [cardGender , setcardGender] = useState()
+    // const [cardDOB , setcardDOB] = useState()
+    // const [cardImgUrl , setcardImgUrl] = useState()
+    const [Card, setCard] = useState({
+        cardName:"",
+        cardGender:"",
+        cardDOB:"",
+        cardImgUrl:""
+    });
 
     const handleChange = (event) =>{
         const {name , value} = event.target
 
-        if(name === "cardName"){
-            setCardName(value);
-        } else if(name === "cardGender"){
-            setcardGender(value);
-        } else if(name === "cardDOB"){
-            setcardDOB(value);
-        } else {
-            setcardImgUrl(value);
-        }
+        setCard(prev =>{
+            return {
+                ...prev,
+                [name] : value
+            }
+        });
+
+        // if(name === "cardName"){
+        //     setCardName(value);
+        // } else if(name === "cardGender"){
+        //     setcardGender(value);
+        // } else if(name === "cardDOB"){
+        //     setcardDOB(value);
+        // } else {
+        //     setcardImgUrl(value);
+        // }
     }
 
     const handleClick = (event) =>{
-        props.onAdd(cardName, cardGender, cardDOB, cardImgUrl);
+        // props.onAdd(cardName, cardGender, cardDOB, cardImgUrl);
+        props.onAdd(Card);
         event.preventDefault();
     }
 
