@@ -17,10 +17,19 @@ const Form = (props) =>{
                 [name] : value
             }
         });
+        
     }
 
     const handleClick = (event) =>{
-        props.onAdd(Card);
+        if(Card.cardName === ""){
+            alert("Enter A Name!")
+        } else if(Card.cardGender !== ("Male" || "Female" || "male" || "female")){
+            alert("Please Enter A Valid Gender - Male or Female")
+        } else if(Card.cardImgUrl ===""){
+            alert("Enter a Valid URL.")
+        } else{
+            props.onAdd(Card);
+        }
         event.preventDefault();
     }
 
@@ -28,7 +37,7 @@ const Form = (props) =>{
         <form>
             <div className="inputData">
                 <label>Enter Card Name:</label>
-                <input type="text" name="cardName" onChange={handleChange}/>
+                <input type="text" name="cardName" onChange={handleChange} />
             </div>
             <div className="inputData">
                 <label>Enter Gender:</label>
